@@ -1,11 +1,8 @@
 class Solution {
 public:
-    int fib(int n) {
-        int ar[n+2];
-        ar[1]=1;ar[0]=0;
-        for(int i=2;i<=n;i++){
-            ar[i] = ar[i-1] + ar[i-2];
-        }
-       return ar[n];
+    int fib(int N) {
+        if(N == 0)  return 0;
+        if(N == 1)  return 1;
+        return fib(N-1) + fib(N-2);
     }
 };
