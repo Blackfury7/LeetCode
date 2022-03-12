@@ -1,2 +1,2 @@
 ​
-O(n) time O(n) Space C++
+O(n) time O(1) Space C++
