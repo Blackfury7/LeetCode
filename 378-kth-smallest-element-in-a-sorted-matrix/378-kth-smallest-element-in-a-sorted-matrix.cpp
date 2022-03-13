@@ -9,7 +9,7 @@ public:
         for(auto i:matrix) {
             for(auto j: i){
                 pq.push(j);
-                if(pq.size() >k)pq.pop();
+                if(pq.size() >k){pq.pop();if(pq.top()<=j)break;}
             }
         }
        
