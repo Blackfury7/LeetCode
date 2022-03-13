@@ -1,1 +1,1 @@
-Dp approach space O(n)
+Dp approach space O(1)
