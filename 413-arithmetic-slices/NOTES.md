@@ -1,1 +1,1 @@
-​
+Brute force method
