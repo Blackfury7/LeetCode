@@ -1,1 +1,1 @@
-Brute force method
+Dp approach space O(n)
