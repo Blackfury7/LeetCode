@@ -7,6 +7,8 @@ public:
         temp="";
         int count,flag=1;
         int n = s.length();
+        
+        // splitting string with del="/" or multiple of "/". 
         for(int i=0;i<n;i++) {
             
             if(s[i] == '/') {
@@ -19,7 +21,7 @@ public:
             }
             temp += s[i];
         }
-        
+        // now vector v contains all the words of the path
         
          stack<string> st;
         
