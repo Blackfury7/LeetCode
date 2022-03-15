@@ -1,0 +1,15 @@
+class Solution {
+public:
+    bool isPowerOfFour(int n) {
+        if(n==1)
+            return true;
+        if(n&1)
+            return false;
+        for(int i=2;i<=log2(n)+1;i+=2){
+            if( (n&(1<<i)) && !(n&(n-1)))
+                return true;
+                
+        }
+        return false;
+    }
+};
