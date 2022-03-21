@@ -1,0 +1,1 @@
+Fundamental idea is that if two instances of characters should be in the same partition.
