@@ -1,1 +1,2 @@
-Brute force
+time: O(n)
+using hash map
