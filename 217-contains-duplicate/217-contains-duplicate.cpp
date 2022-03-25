@@ -10,7 +10,7 @@ public:
         // }
             
          for(auto i: nums) {
-             if(m.find(i) != m.end()) return 1;
+             if(m[i]) return 1;
              m[i]=1;
          }
         
