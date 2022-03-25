@@ -1,10 +1,6 @@
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
-       
-        ios_base::sync_with_stdio(0);
-        cout.tie(NULL);
-        cin.tie(NULL);
         unordered_map<int,int> m;
         // int n = nums.size();
          // sort(nums.begin(), nums.end());
