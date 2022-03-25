@@ -9,9 +9,9 @@ public:
         //     if(nums[i] == nums[i+1])return 1;
         // }
             
-         for(int i=0; i<n; i++) {
-             if(m.find(nums[i]) != m.end()) return 1;
-             m[nums[i]]=1;
+         for(auto i: nums) {
+             if(m.find(i) != m.end()) return 1;
+             m[i]=1;
          }
         
         return 0;
