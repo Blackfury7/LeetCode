@@ -15,7 +15,7 @@ public:
         else {
            return binS(nums, l, mid-1,t);
         }
-        // return -1;
+
     }
     
     int search(vector<int>& nums, int target) {
