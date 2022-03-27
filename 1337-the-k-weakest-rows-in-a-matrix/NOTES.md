@@ -1,1 +1,1 @@
-​
+If you have a vector of vectors and you use the sort functionality it sorts first on the basis of first element, if there is a tie then it is broken on the basis of the second element, and so on. We can use this property to our advantage to come with a solution. Now there is another condition which is if the two arrays are same, then the tie is broken based on the index i.e if mat[i] == mat[j] then i is weaker than j if i<j else the opposite. So, what we can do is append the index at the end. Then simple sorting will automatically take care of that second condition.
