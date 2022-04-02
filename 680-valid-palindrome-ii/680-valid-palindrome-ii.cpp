@@ -17,14 +17,5 @@ public:
         }
         return true;
     }
-    
-    // bool validPalindrome(string s) {
-    //     int n = s.length();
-    //     int f=0;
-    //     for(int i=0; i<n/2; i++){
-    //         if(s[i]!=s[n-i-1])f++;
-    //     }
-    //     if( !f || f==1 && !(n&1))return true;
-    //     else return false;
-    // }
+
 };
