@@ -1,22 +1,7 @@
 class Solution {
 public:
     void nextPermutation(vector<int>& nums) {
-        // next_permutation(begin(nums), end(nums));
-        
-        //****************************************************
-        
-        // int i = nums.size() - 1, k = i;
-        // while (i > 0 && nums[i-1] >= nums[i])
-        //     i--;
-        // for (int j=i; j<k; j++, k--)
-        //     swap(nums[j], nums[k]);
-        // if (i > 0) {
-        //     k = i--;
-        //     while (nums[k] <= nums[i])
-        //         k++;
-        //     swap(nums[i], nums[k]);
-        // }
-        //****************************************************
+      
         
         int n = nums.size(),k,l;
         for(k=n-2; k>=0; k--) {
@@ -32,6 +17,24 @@ public:
         swap(nums[k], nums[l]);
         reverse(nums.begin() + k + 1, nums.end());
         }
+        
+        
+          // next_permutation(begin(nums), end(nums));
+        
+        //****************************************************
+        
+        // int i = nums.size() - 1, k = i;
+        // while (i > 0 && nums[i-1] >= nums[i])
+        //     i--;
+        // for (int j=i; j<k; j++, k--)
+        //     swap(nums[j], nums[k]);
+        // if (i > 0) {
+        //     k = i--;
+        //     while (nums[k] <= nums[i])
+        //         k++;
+        //     swap(nums[i], nums[k]);
+        // }
+        //****************************************************
         
     }
 };
