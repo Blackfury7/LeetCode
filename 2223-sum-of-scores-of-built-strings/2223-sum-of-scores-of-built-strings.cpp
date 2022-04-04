@@ -14,16 +14,13 @@ public:
         }
         return z;
     }
+    
     long long sumScores(string s) {
-        
-        
         auto v = z_function(s);
         long long sum=s.length();
         sum=accumulate(v.begin(),v.end(),sum);
         // for(auto i:v)sum+=i;
         return sum;
-        
-        
         
         //Brute force
 //         long long n=s.length();
