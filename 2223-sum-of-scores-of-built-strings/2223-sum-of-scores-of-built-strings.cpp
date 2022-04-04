@@ -19,8 +19,8 @@ public:
         
         auto v = z_function(s);
         long long sum=s.length();
-        // accumulate(v.begin(),v.end(),sum);
-        for(auto i:v)sum+=i;
+        sum=accumulate(v.begin(),v.end(),sum);
+        // for(auto i:v)sum+=i;
         return sum;
         
         
