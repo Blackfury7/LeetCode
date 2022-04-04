@@ -1,6 +1,12 @@
 class Solution {
 public:
     
+    
+    
+    
+    
+    //*********************************************************************************************************************
+    //3D DP
     long long dp[100001][4][3];
     long long solve(string &s, int index, int selection, int prevBuilding) {
         int n = s.size();
@@ -16,15 +22,13 @@ public:
         
         //choices
         if((s[index]-'0') != prevBuilding) {
-            return dp[index][selection][prevBuilding+1] = solve(s,index+1, selection-1,s[index] - '0') + solve(s, index+1, selection, prevBuilding);
+            return dp[index][selection][prevBuilding+1] = solve(s,index+1, selection-1,s[index] - '0') + 
+                solve(s, index+1, selection, prevBuilding);
             
         } else {
             return dp[index][selection][prevBuilding+1] = solve(s, index+1, selection, prevBuilding);
         }
-        
         return 0;
-        
-        
     }
     
     long long numberOfWays(string s){
@@ -37,4 +41,5 @@ public:
         }
         return solve(s,0,3,-1); 
     }
+    //*********************************************************************************************************************
 };
