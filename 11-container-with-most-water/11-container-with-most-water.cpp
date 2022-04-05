@@ -9,7 +9,6 @@ public:
             water = max(water,(r-l) * min(height[l], height[r]));
             if(height[l] < height[r])l++;
             else r--;
-            
         }
         return water;
     }
