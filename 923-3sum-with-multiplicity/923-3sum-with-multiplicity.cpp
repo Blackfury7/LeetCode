@@ -3,7 +3,7 @@ public:
     int threeSumMulti(vector<int>& arr, int target) {
         
      //************************************************************************************************************   
-        int n = size(arr), ans = 0, mod = 1000000007;
+        int n = size(arr), ans = 0, mod = 1e9 + 7;
         sort(begin(arr), end(arr));
         for(int i = 0; i < n - 2; i++){
             int T = target - arr[i],  j = i + 1, k = n - 1;
