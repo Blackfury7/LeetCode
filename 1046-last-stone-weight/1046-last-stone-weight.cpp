@@ -7,13 +7,13 @@ public:
         // Time O(NlogN)
         // Space O(N)
         
-        // priority_queue<int> pq(begin(stones), end(stones));
-        // while (pq.size() > 1) {
-        //     int x = pq.top(); pq.pop();
-        //     int y = pq.top(); pq.pop();
-        //     if (x > y) pq.push(x - y);
-        // }
-        // return pq.empty() ? 0 : pq.top();
+        priority_queue<int> pq(begin(stones), end(stones));
+        while (pq.size() > 1) {
+            int x = pq.top(); pq.pop();
+            int y = pq.top(); pq.pop();
+            if (x > y) pq.push(x - y);
+        }
+        return pq.empty() ? 0 : pq.top();
         
         
         //******************************************************************************************
@@ -41,23 +41,23 @@ public:
         
         // Recursion solution
         
-        if(stones.size() == 0)
-            return 0;
-        if(stones.size() == 1)
-            return stones.front();
+//         if(stones.size() == 0)
+//             return 0;
+//         if(stones.size() == 1)
+//             return stones.front();
         
-        sort(stones.begin(),stones.end());
+//         sort(stones.begin(),stones.end());
         
-        int a = stones[stones.size()-1];
-        int b = stones[stones.size()-2];
+//         int a = stones[stones.size()-1];
+//         int b = stones[stones.size()-2];
         
-        stones.pop_back();
-        stones.pop_back();
+//         stones.pop_back();
+//         stones.pop_back();
         
-        if(a == b)
-            return  lastStoneWeight(stones);
-        stones.push_back(a-b);
-        return lastStoneWeight(stones);
+//         if(a == b)
+//             return  lastStoneWeight(stones);
+//         stones.push_back(a-b);
+//         return lastStoneWeight(stones);
     
         //******************************************************************************************
     }
