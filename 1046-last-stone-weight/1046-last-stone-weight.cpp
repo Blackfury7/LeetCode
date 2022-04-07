@@ -3,6 +3,7 @@ public:
     int lastStoneWeight(vector<int>& stones) {
         
         //******************************************************************************************
+        //Using Heap(Priority Queue)
         //Complexity
         // Time O(NlogN)
         // Space O(N)
