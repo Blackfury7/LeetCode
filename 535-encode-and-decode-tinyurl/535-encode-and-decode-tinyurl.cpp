@@ -2,6 +2,7 @@ class Solution {
     public:
         map<string,string> mp;
         int n = 0;
+        // Encodes a URL to a shortened URL.
         string encode(string longUrl) {
             string res = "http://tinyurl.com/" + to_string(n);
             n++;
