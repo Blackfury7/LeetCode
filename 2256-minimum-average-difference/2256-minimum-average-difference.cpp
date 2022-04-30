@@ -6,7 +6,7 @@ public:
         if(n==1)return 0;
         long long sum = 0;
         for(auto i:nums)sum += i;
-        // if(sum ==0)return 0;
+
         long long avg=INT_MAX;
        
         int ind = 0;
