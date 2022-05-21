@@ -1,14 +1,14 @@
 class Solution {
 public:
-    int dp[10000 + 1][12 + 1];  // New Line Added
+    int dp[10000 + 1][12 + 1]; 
     
     int memoization(vector<int>& wt, int w, int n)
     {
         if (n == 0 || w == 0)
             return (w == 0) ? 0 : INT_MAX - 1;
         
-        if (dp[w][n] != -1) // New Line Added
-            return dp[w][n];  // New Line Added
+        if (dp[w][n] != -1) 
+            return dp[w][n];  
 			
         if (wt[n - 1] > w) 
             return dp[w][n] = 0 + memoization(wt, w - 0, n - 1);
@@ -18,7 +18,7 @@ public:
     
     int coinChange(vector<int>& coins, int amount) 
     {
-        memset(dp, -1, sizeof(dp)); // New Line Added
+        memset(dp, -1, sizeof(dp)); 
         int minCoins = memoization(coins, amount, coins.size());
         return minCoins == INT_MAX - 1 ? -1 : minCoins;    
     }
