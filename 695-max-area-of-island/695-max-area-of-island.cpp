@@ -4,7 +4,11 @@ public:
         if(i >= 0 and i < n and j>= 0 and j<m and grid[i][j]){
             grid[i][j] = 0;
             
-            return 1 + dfs(grid, i+1, j, n, m) + dfs(grid, i-1, j, n, m) + dfs(grid, i, j+1, n, m) + dfs(grid, i, j-1, n, m);
+            return 1 + 
+                dfs(grid, i+1, j, n, m) + 
+                dfs(grid, i-1, j, n, m) + 
+                dfs(grid, i, j+1, n, m) + 
+                dfs(grid, i, j-1, n, m);
         }
         return 0;
     }
