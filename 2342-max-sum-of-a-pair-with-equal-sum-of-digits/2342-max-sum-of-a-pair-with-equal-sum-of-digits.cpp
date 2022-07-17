@@ -9,7 +9,7 @@ public:
         return s;
     }
     int maximumSum(vector<int>& nums) {
-        
+        sort(nums.begin(), nums.end());
         map<int,vector<int>>m;
         for(auto i:nums){
             int x= digi(i);
@@ -20,7 +20,7 @@ public:
             auto x = i.second;
             int n_x = x.size();
             if(n_x >1){
-                sort(x.begin(), x.end());
+                // sort(x.begin(), x.end());
                 int sum = x[n_x - 1] + x[n_x - 2];
                 if(flag){
                     mx = sum;
