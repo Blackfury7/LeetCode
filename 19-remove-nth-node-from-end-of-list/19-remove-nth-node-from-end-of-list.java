@@ -23,6 +23,8 @@ class Solution {
             n++;
             curr = curr.next;
         }
+        System.out.println(n);
+        System.out.println(n-position);
         //if there is only one node or less
         if(n<2)return null;
         
@@ -34,26 +36,23 @@ class Solution {
       //       head = temp.next;   
       //       return head;
       //   }
- 
         int i=1; ListNode temp1=head;
-        
         // if position is head
         if(n-position == 0){
             head=head.next;
             return head;
         }
-        
-        
-    while(i<n-position){i++;
-            temp1=temp1.next;
-            
+         
+    while(i<n-position){
+            i++;
+            temp1=temp1.next;   
             }
+        
         // if position is end node
-        if(position == 0)
-        {
-            temp1.next=null;
-            return head;
-        }
+        // if(position == 0){
+        //     temp1.next=null;
+        //     return head;
+        // }
         
         // if position is in middle
         temp1.next = temp1.next.next;
