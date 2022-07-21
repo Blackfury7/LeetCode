@@ -23,18 +23,17 @@ class Solution {
             n++;
             curr = curr.next;
         }
+        //if there is only one node or less
         if(n<2)return null;
         
-           if (head == null)
-            return head;
-       
+           // if (head == null)
+           //  return head;
         ListNode temp = head;
- 
-      if (position == 0)
-        {
-            head = temp.next;   
-            return head;
-        }
+      // if (position == 0)
+      //   {
+      //       head = temp.next;   
+      //       return head;
+      //   }
  
         int i=1; ListNode temp1=head;
         
@@ -56,15 +55,12 @@ class Solution {
             return head;
         }
         
-       // System.out.println(temp1.val);
-        
         // if position is in middle
         temp1.next = temp1.next.next;
            
         // if (temp == null || temp.next == null)
         //     return null;
 //         ListNode next = temp.next.next;
- 
 //         temp.next = next.next;
         return head;
     }
