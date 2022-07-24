@@ -1,20 +1,44 @@
 class NumberContainers {
 public:
-    map<int,int>v;
+    //**********************************************************************************************************************
+//     map<int,int>v;
+//     NumberContainers() {
+        
+//     }
+    
+//     void change(int index, int number) {
+//         v[index]=number;
+//     }
+    
+//     int find(int number) {
+//         for(auto it: v)
+//             if(it.second == number)
+//                 return it.first;
+//         return -1;
+//     }
+    //**********************************************************************************************************************
+    //**********************************************************************************************************************
+   
+    map<int, set<int>>m;
+    map<int, int> A;
     NumberContainers() {
         
     }
     
     void change(int index, int number) {
-        v[index]=number;
+        set<int>::iterator it = m[A[index]].find(index);
+        if(it != m[A[index]].end()) m[A[index]].erase(it);
+        A[index] = number;
+        m[number].insert(index);
     }
     
-    int find(int number) {
-        for(auto it: v)
-            if(it.second == number)
-                return it.first;
+    int find(int number){
+        if(m[number].size()) return *(m[number].begin());
         return -1;
     }
+    
+    //**********************************************************************************************************************
+    
 };
 
 /**
