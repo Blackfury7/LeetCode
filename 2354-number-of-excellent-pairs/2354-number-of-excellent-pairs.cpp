@@ -1,7 +1,11 @@
 class Solution {
 public:
     
-    
+    /*
+        Intuition:
+        The Inclusion-Exclusion Principle
+        bits(num1 OR num2) + bits(num1 AND num2) = bits(num1) + bits(num2)
+    */    
     long long countExcellentPairs(vector<int>& A, int k) {
         long long cnt[30] = {}, ans = 0;
         for(int a : unordered_set<int>(begin(A), end(A)))
