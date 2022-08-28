@@ -9,10 +9,10 @@ public:
         for(auto &i : garbage) sum += i.size(); // total garbage
         for(int i = n -1; i >= 0; i--) { // finding last indeces of each garbage type
             string s = garbage[i];
-            if(v[0] ==-1 and s.find('M') != string::npos) v[0] = i;
+            if(v[0] == -1 and s.find('M') != string::npos) v[0] = i;
             if(v[1] == -1 and s.find('G') != string::npos) v[1] = i;
             if(v[2] == -1 and s.find('P') != string::npos) v[2] = i;
-            if(v[0] !=-1 and v[1] != -1 and v[2] != -1)  break;
+            if(v[0] != -1 and v[1] != -1 and v[2] != -1) break;
         }
         for(auto &i: v) sum += (i!=-1?travel[i]:0);
 
