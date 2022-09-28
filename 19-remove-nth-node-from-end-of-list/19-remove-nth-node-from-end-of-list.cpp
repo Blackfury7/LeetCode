@@ -10,6 +10,7 @@
  */
 class Solution {
 public:
+    
     //Solution - I (One-Pointer, Two-Pass)
     // ListNode* removeNthFromEnd(ListNode* head, int n) {
     //     ListNode* iter = head;
