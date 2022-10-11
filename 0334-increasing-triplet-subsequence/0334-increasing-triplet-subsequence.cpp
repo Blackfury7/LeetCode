@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool increasingTriplet(vector<int>& nums) {
+   bool increasingTriplet(vector<int>& nums) {
     int c1 = INT_MAX, c2 = INT_MAX;
     for (int x : nums) {
         if (x <= c1) {
