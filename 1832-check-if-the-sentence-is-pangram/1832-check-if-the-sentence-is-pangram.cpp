@@ -9,7 +9,7 @@ public:
         // one liner code
         // return set<char>(sen.begin(), sen.end()).size() == 26;
         
-        // 3rd logic
+        // 3rd logic using bit manupulation
         int seen = 0;
         for( char c : sen) {
             int ci = c - 'a' ;
