@@ -1,8 +1,9 @@
-class Solution {
-public:
-    static bool cmp(vector<int>& a, vector<int>& b) {
+bool cmp(vector<int>& a, vector<int>& b) {
         return a[1] < b[1];
     }
+class Solution {
+public:
+    
  public:   
     int findMinArrowShots(vector<vector<int>>& segments) {
         sort(segments.begin(), segments.end(), cmp);
