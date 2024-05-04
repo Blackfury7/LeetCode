@@ -19,9 +19,9 @@ public:
         int zeros, ones;
         for(int i = 0; i < N; i++) {
             zeros = 0;
+            //zeros = count(begin(strs[i]), end(str), '0');
             for(auto &ch: strs[i])
                 zeros += (ch=='0');
-            
             ones = strs[i].size() - zeros;
             v.push_back({zeros, ones});
         }
