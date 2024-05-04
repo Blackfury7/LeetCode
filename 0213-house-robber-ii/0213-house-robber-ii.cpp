@@ -1,35 +1,29 @@
 class Solution {
 public:
     int n;
-    int dp[105][2][2];
+    int dp[105][2];
     
-    int func(int ind, int isLastChoosen, int isFirstChoosen, vector<int>& v ){
+    int func(int ind, int isFirstChoosen, vector<int>& v ){
         if(ind < 0) return 0;
-        if(dp[ind][isLastChoosen][isFirstChoosen] != -1) 
-            return dp[ind][isLastChoosen][isFirstChoosen];
+        if(dp[ind][isFirstChoosen] != -1) 
+            return dp[ind][isFirstChoosen];
         
         int ans = 0;
         // not choosing
-        ans = func(ind - 1, 0, isFirstChoosen, v);
+        ans = func(ind - 1, isFirstChoosen, v);
         
-        // choosing only if last was not choosen (also taken care of cyclic condition)
-        if(!isLastChoosen and ((ind != 0) or (ind == 0 and !isFirstChoosen)))  {
+        // choosing
+        if(ind != 0 or !isFirstChoosen)  {
             if(ind == n-1) isFirstChoosen = 1; // for cyclic case - for last & first element
             
-            ans = max(ans, func(ind -1, 1, isFirstChoosen, v) + v[ind]);
+            ans = max(ans, func(ind -2, isFirstChoosen, v) + v[ind]);
         }
-        return dp[ind][isLastChoosen][isFirstChoosen] = ans; 
+        return dp[ind][isFirstChoosen] = ans; 
     }
     
     int rob(vector<int>& nums) {
         n = nums.size();
-                
-        // filling dp array with -1
-        for(int i = 0; i <= n; i++) 
-            for(int j = 0; j < 2; j++)
-                dp[i][j][0] = dp[i][j][1] = -1;
-
-        
-        return func(n-1, 0, 0, nums);
+        memset(dp, -1, sizeof(dp));
+        return func(n-1, 0, nums);
     }
 };
