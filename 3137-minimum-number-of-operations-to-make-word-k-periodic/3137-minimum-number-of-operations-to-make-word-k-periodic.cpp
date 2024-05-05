@@ -4,19 +4,15 @@ public:
         int n = word.size();
         map<string, int> m;
         string s = "";
-        for(int i =0 ; i<n; i++) {
-            
-            if(i && (i%k) ==0){
-                m[s] += k;
-                s="";
-            }
-            s.push_back(word[i]);
+        for(int i =0 ; i<n; i+=k) {
+            string a = word.substr(i,k);
+                m[a] += k;
         }
-        m[s] += k;
+        
         int mx =0;
-        for(auto& [i,j]:m){
-            if(j > mx) mx=j;
-        }
+        for(auto& [i,j]:m)
+            mx = max(mx, j);
+        
         return (n - mx)/k; 
             
     }
