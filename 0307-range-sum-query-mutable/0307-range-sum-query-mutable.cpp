@@ -1,5 +1,7 @@
 class NumArray {
 public:
+    
+    // Implemented Binary Index Tree or Fenwick Tree 
      const int N = 1e5 + 10;
     int arr[100005];
     int bit[100005];
