@@ -1,7 +1,7 @@
 class Solution {
 public:
     
-    // *************************** Sliding Window *************************** 
+    // ************************ Sliding Window - TC O(N) **********************
     vector<int> findClosestElements(vector<int>& arr, int k, int x) {
         int ind = 0, min_s, sum = 0;
         int n = arr.size();
@@ -17,13 +17,10 @@ public:
                 ind = i-k+1;
             } 
         }
-        
-        
         return vector<int>(arr.begin() + ind, arr.begin() + ind + k);
-        
     }
     
-    // ***************************** Binary Search *****************************
+    // ********************* Binary Search - TC O(log(n-k) + k) ***************
     // vector<int> findClosestElements(vector<int>& A, int k, int x) {
     //     int left = 0, right = A.size() - k;
     //     while (left < right) {
