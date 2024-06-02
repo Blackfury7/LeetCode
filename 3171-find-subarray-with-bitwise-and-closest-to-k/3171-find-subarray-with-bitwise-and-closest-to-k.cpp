@@ -5,6 +5,10 @@ public:
     
     
     int minimumDifference(vector<int>& nums, int k) {
+        
+        // used the property of BITWISE AND 
+        // (a1 & a2 & a3 .... & an) <= min(a1, a2, a3 .... an)
+        
         int n = nums.size();
         vector<vector<int>> bits(n+1, vector<int>(31));
         
@@ -16,7 +20,7 @@ public:
                 }
             }
         }
-        
+        // used in debugging for converting num to binary
 //         auto bin = [&](int n1) {
 //             int n = n1;
 //             string s = "";
@@ -67,7 +71,10 @@ public:
             // ans = min(ans, abs(k - nums[i]));
             int f = find(i);
             // cout<<"f "<<f<<"\n";
+            
+            // f is when (ANDBits(i, f) <= k)
             if(f < n) ans = min(ans, abs(k - ANDBits(i, f)));
+            // f- 1 is ( k >= ANDBits(i, f - 1) ) 
             if(f > i) ans = min(ans, abs(k - ANDBits(i, f - 1)));
         }
         return ans;
