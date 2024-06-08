@@ -43,17 +43,18 @@ public:
             // starting
             ans = max(ans,fun(i-1, i, k, nums)+1);
             // not starting
-            ans = max(ans, fun(i-1, last, k, nums));
+            // ans = max(ans, fun(i-1, last, k, nums));
         }
         else{
            
             //case 2
-                if(nums[i] != nums[last] and k>0)
-                    ans = max(ans, fun(i-1, i, k-1, nums)+1);
+            if(nums[i] != nums[last] and k>0)
+                ans = max(ans, fun(i-1, i, k-1, nums)+1);
 
             // case 3
-            ans = max(ans, fun(i-1, last, k, nums));
+            
         }
+        ans = max(ans, fun(i-1, last, k, nums));
         
         return dp[i][last+1][k]=ans;
                 
