@@ -39,13 +39,16 @@ public:
         if(dp[i][last+1][k] != -1) return dp[i][last+1][k];
         
         int ans=0;
-        if(last == -1 or nums[i] == nums[last]) {
+        if(last == -1){
+        // if(last == -1 or nums[i] == nums[last]) {
             // starting
             ans = max(ans,fun(i-1, i, k, nums)+1);
             // not starting
             // ans = max(ans, fun(i-1, last, k, nums));
         }
         else{
+            if(nums[i] == nums[last])
+                ans = max(ans,fun(i-1, i, k, nums)+1);
            
             //case 2
             if(nums[i] != nums[last] and k>0)
