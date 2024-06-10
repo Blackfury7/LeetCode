@@ -12,7 +12,7 @@ public:
     }
     bool fun(int i, int mask, int sum, vector<int>& nums) {
         if(i==3){
-            return getsum(mask, nums) == sum;
+            return dp[i][mask]=(getsum(mask, nums) == sum);
         }
         if(dp[i][mask]  != -1) return dp[i][mask];
         
