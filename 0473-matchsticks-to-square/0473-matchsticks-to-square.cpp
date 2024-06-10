@@ -27,6 +27,7 @@ public:
     
     
     bool makesquare(vector<int>& nums) {
+        // logic used: distribute all nums to 4 groups such that their sum is equal
         memset(dp, -1, sizeof(dp));
         int sum = 0;
         for(auto &i: nums) sum+=i;
