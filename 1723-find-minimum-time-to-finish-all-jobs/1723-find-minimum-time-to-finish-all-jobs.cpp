@@ -23,7 +23,7 @@ public:
         
         int ans = INT_MAX;
         int d = 0;
-        // Iterate over all subsets of the available cookies (cool trick)
+        // Iterate over all subsets of the available jobs (cool trick)
         for(int submask=mask; submask > 0; submask = (submask-1)&mask) {
                 ans = min(ans, 
                           max(solve(i+1, mask ^ (submask), jobs, k, n), 
